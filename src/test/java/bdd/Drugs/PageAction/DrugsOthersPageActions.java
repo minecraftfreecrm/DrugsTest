@@ -1,9 +1,8 @@
 package bdd.Drugs.PageAction;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
@@ -22,30 +21,13 @@ public class DrugsOthersPageActions {
 		PageFactory.initElements(SetupDriver.driver, DrugsOthersPageLocatorsObj);
 	}
 
-	public void tag1() throws InterruptedException {
-
-		
-		
-		DrugsOthersPageLocatorsObj.ClkDiabetes.click();
-
-		Thread.sleep(3000);
-
-		WebElement Type1 = SetupDriver.driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/h2[29]"));
-		js.executeScript("arguments[0].scrollIntoView();", Type1);
-
-		DrugsOthersPageLocatorsObj.ClickType1.click();
-
-		Thread.sleep(2000);
-		String A = DrugsOthersPageLocatorsObj.Verify.getText();
-		System.out.println(A);
-
-	}
+	
 
 	public void tag2() throws InterruptedException {
 
 		DrugsOthersPageLocatorsObj.clkMedication.click();
 
-		Thread.sleep(200);
+		Thread.sleep(1000);
 
 		DrugsOthersPageLocatorsObj.clkAlpha.click();
 

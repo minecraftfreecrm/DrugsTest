@@ -21,7 +21,7 @@ public class DrugsAllStepes {
 	}
 	@When("^Click on Condition & Disease  link$")
 	public void click_on_Condition_Disease_link() throws Throwable {
-		DrugsHomePageActionsObj.HopePageLocators();;
+		DrugsHomePageActionsObj.HopePageLocators();
 	}
 	
 	
@@ -29,19 +29,19 @@ public class DrugsAllStepes {
 	//tag1
 	@When("^Click on any Common  diseases and conditions$")
 	public void click_on_any_Common_diseases_and_conditions() throws Throwable {
-		DrugsOthersPageActionsObj.tag1();
+		DrugsHomePageActionsObj.HopePageLocators();
 	}
 	@When("^Scroll down to find the Type (\\d+) Support link$")
 	public void scroll_down_to_find_the_Type_Support_link(int arg1) throws Throwable {
-		DrugsOthersPageActionsObj.tag1();
+		DrugsHomePageActionsObj.HopePageLocators();
 	}
 	@When("^Click on the Type (\\d+) Support link$")
 	public void click_on_the_Type_Support_link(int arg1) throws Throwable {
-		DrugsOthersPageActionsObj.tag1();
+		DrugsHomePageActionsObj.HopePageLocators();
 	}
 	@Then("^Verify with Related terms title$")
 	public void verify_with_Related_terms_title() throws Throwable {
-		DrugsOthersPageActionsObj.tag1();
+		DrugsHomePageActionsObj.HopePageLocators();
 	}
 	
 	

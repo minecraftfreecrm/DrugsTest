@@ -1,10 +1,13 @@
 package bdd.utilities;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SetupDriver {
 public static WebDriver driver;
@@ -12,10 +15,16 @@ public static WebDriver driver;
 	
 	public static void setupDriver() {
 
-		System.setProperty("webdriver.chrome.driver", "C:/TTSoftware/chromedriver.exe");
+		
+		WebDriverManager.chromedriver().setup();
+		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		driver = new ChromeDriver(options);
+		options.addArguments("start-maximized");
+		   options.setExperimentalOption("excludeSwitches",
+				    Arrays.asList("disable-popup-blocking"));
+			
 		
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		

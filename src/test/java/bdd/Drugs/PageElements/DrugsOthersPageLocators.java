@@ -5,15 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class DrugsOthersPageLocators {
 	
-	//tag1
-	@FindBy(linkText="A")
-	public WebElement ClkDiabetes;
 	
-	@FindBy(linkText="Type 1 Diabetes")
-	public WebElement ClickType1;
-	
-	@FindBy(className="ddc-text-size-small")
-	public WebElement Verify;
 	
 	
 	
