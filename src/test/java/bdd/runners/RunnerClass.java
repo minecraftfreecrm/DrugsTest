@@ -12,7 +12,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = { "src/test/resources/FeatureFiles" }, 
 glue = { "bdd.stepDef", "bdd.utilities" }, 
-tags = {"@tag1,@tag2,@tag3,@tag4,@tag5" }, 
+tags = {"@tag1,@tag2" }, 
 plugin = { "pretty", "html:target/cucumber-htmlreport",
 				"json:target/cucumber-report.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },

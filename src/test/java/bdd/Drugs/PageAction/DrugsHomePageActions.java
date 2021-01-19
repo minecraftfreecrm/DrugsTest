@@ -5,9 +5,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import bdd.Drugs.PageElements.DrugsHomePageLocators;
 import bdd.utilities.SetupDriver;
@@ -29,7 +31,17 @@ public class DrugsHomePageActions {
 	}
 	
 	public void HopePageLocators() throws Exception{
-		DrugsHomePageLocatorsObj.ClkLeftArrow.click();
+	DrugsHomePageLocatorsObj.ClkLeftArrow.click();
+		/*
+		if(	DrugsHomePageLocatorsObj.ClkLeftArrow.isDisplayed()==true) {
+		
+			DrugsHomePageLocatorsObj.ClkLeftArrow.click();
+		}else {
+			WebDriver driver = null;
+			new WebDriverWait(driver,5).until(ExpectedConditions.visibilityOf(DrugsHomePageLocatorsObj.ClkLeftArrow));
+			System.out.println("Waiting for 5 minutes" );
+			*/
+		
 		
 		
 	/*
@@ -40,7 +52,20 @@ public class DrugsHomePageActions {
 	 * 
 	 * }
 	 */
-		DrugsHomePageLocatorsObj.ClkCondotion.click();
+		//DrugsHomePageLocatorsObj.ClkCondotion.click();
+		
+		if(	DrugsHomePageLocatorsObj.ClkCondotion.isDisplayed()==true) {
+			
+			DrugsHomePageLocatorsObj.ClkCondotion.click();
+		}else {
+			WebDriver driver = null;
+			new WebDriverWait(driver,5).until(ExpectedConditions.visibilityOf(DrugsHomePageLocatorsObj.ClkCondotion));
+			System.out.println("Waiting for 5 minutes" );
+			
+		}
+		
+		
+		
 		
 	
 //public void tag1() throws InterruptedException {
