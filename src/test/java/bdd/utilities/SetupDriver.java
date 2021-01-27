@@ -16,7 +16,7 @@ public static WebDriver driver;
 	public static void setupDriver() {
 
 		
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().browserVersion("88.0.4324.104").setup();       
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
@@ -26,7 +26,7 @@ public static WebDriver driver;
 				    Arrays.asList("disable-popup-blocking"));
 			
 		
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 	}
 	

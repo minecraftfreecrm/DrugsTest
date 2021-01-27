@@ -12,12 +12,12 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = { "src/test/resources/FeatureFiles" }, 
 glue = { "bdd.stepDef", "bdd.utilities" }, 
-tags = {"@tag1,@tag2" }, 
+tags = "@Sprint" , 
 plugin = { "pretty", "html:target/cucumber-htmlreport",
 				"json:target/cucumber-report.json",
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },
 //strict=true,
-//name="Drug and Medication",
+//name="Common diseases and conditions",
 monochrome = true)
 
 public class RunnerClass extends AbstractTestNGCucumberTests {
