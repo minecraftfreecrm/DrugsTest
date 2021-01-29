@@ -1,7 +1,7 @@
 @drugs @regression 
 Feature: Users ability to login 
 
-@Sprint
+@Sprint1
 Scenario Outline: User should able to login using Sign-On Feature 
 
 	Given Land to drugs.com homepage 

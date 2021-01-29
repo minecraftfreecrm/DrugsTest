@@ -1,7 +1,7 @@
 @drugs @regression
 Feature: Users ability to create account 
 
-@Sprint
+@Sprint1
 Scenario Outline: User should able to create account using Register 
 
 	Given Browse to drugs homepage

@@ -17,7 +17,7 @@ import bdd.utilities.SetupDriver;
 public class DrugsHomePageActions {
 	DrugsHomePageLocators DrugsHomePageLocatorsObj;
 	JavascriptExecutor js = (JavascriptExecutor) SetupDriver.driver;
-	WebDriver driver = null;
+	WebDriver driver;
 
 	public DrugsHomePageActions() {
 		DrugsHomePageLocatorsObj = new DrugsHomePageLocators();
@@ -31,24 +31,7 @@ public class DrugsHomePageActions {
 		SetupDriver.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 
-	/*
-	 * WebDriver driver; TimeUnit SECONDS; Wait<WebDriver> wait = new
-	 * FluentWait<WebDriver>(driver) .withTimeout(30, SECONDS) .pollingEvery(5,
-	 * SECONDS) .ignoring(NoSuchElementException.class);
-	 * 
-	 * WebElement drugs = wait.until(new Function<WebDriver, WebElement>()); {
-	 * public WebElement apply(WebDriver driver) { return
-	 * driver.findElement(By.id("drugs")); } });
-	 */
 	public void HopePageLocators() throws Exception {
-
-		/*
-		 * DrugsHomePageLocatorsObj.ClkLeftArrow.click();
-		 * 
-		 * /* Wait wait = new FluentWait(driver) .withTimeout(50,
-		 * TimeUnit.SECONDS) .pollingevery(3, TimeUnit.SECONDS)
-		 * .ignoring(NoSuchElementException.class);
-		 */
 
 		if (DrugsHomePageLocatorsObj.ClkLeftArrow.isDisplayed() == true) {
 
@@ -58,24 +41,16 @@ public class DrugsHomePageActions {
 			new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOf(DrugsHomePageLocatorsObj.ClkLeftArrow));
 			System.out.println("Waiting for 5 minutes");
 
-			/*
-			 * try { DrugsHomePageLocatorsObj.ClkLeftArrow.click(); } catch
-			 * (Exception ee) { if
-			 * (ee.toString().contains("NoSuchElementException")) { }}
-			 */
-
 			if (DrugsHomePageLocatorsObj.ClkCondotion.isDisplayed() == true) {
 
 				DrugsHomePageLocatorsObj.ClkCondotion.click();
 			} else {
 
-				new WebDriverWait(driver, 5)
+				new WebDriverWait(driver, 10)
 						.until(ExpectedConditions.visibilityOf(DrugsHomePageLocatorsObj.ClkCondotion));
 				System.out.println("Waiting for 5 minutes");
 
 			}
-
-			// public void tag1() throws InterruptedException {
 
 			DrugsHomePageLocatorsObj.ClkDiabetes.click();
 

@@ -16,7 +16,7 @@ public static WebDriver driver;
 	public static void setupDriver() {
 
 		
-		WebDriverManager.chromedriver().browserVersion("88.0.4324.104").setup();       
+		WebDriverManager.chromedriver().browserVersion("88.0.4324.96").setup();       
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");

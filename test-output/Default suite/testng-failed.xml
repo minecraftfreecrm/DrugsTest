@@ -6,9 +6,7 @@
       <class name="bdd.runners.RunnerClass">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0"/>
-          <include name="writeExtentReport"/>
-          <include name="tearDownClass"/>
+          <include name="feature"/>
         </methods>
       </class> <!-- bdd.runners.RunnerClass -->
     </classes>

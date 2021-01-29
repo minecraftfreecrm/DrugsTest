@@ -2,7 +2,7 @@ Feature: Drugs dot com
 
 Background: Browse to Drugs.com
  Given Browse to Drugs.com
-  @Sprint
+  @Sprint2
   Scenario: User Should able to check Common diseases and conditions
     
     When Click on the right arrow sign
@@ -12,7 +12,7 @@ Background: Browse to Drugs.com
     And Click on the Type 1 Support link
     Then Verify with Related terms title
 
-  @Sprint1
+  @Sprint3
   Scenario: User should able to know details about Drug and Medication
     
     When Click on the Drug and Medications Button
@@ -20,7 +20,7 @@ Background: Browse to Drugs.com
     Then Click on the Medication
     
     
-    @Sprint1
+    @Sprint3
     Scenario: User Should able to read expected medicine guide
     
     When Click on More Button
@@ -32,14 +32,14 @@ Background: Browse to Drugs.com
     Then Verify with page URL
     
     
-    @Sprint2
+    @Sprint3
     Scenario: User should able to check medication price
     
     When Click on the Pricing & Coupon Guide link
     And Click on the medication name
     Then Verify with medication price
     
-    @Sprint2
+    @Sprint4
     Scenario: User should able to check the treatment condition
     
     When Click on the Treatment Options link
@@ -47,7 +47,7 @@ Background: Browse to Drugs.com
     And Select a condition
     Then Verify with page URL
     
-    @Sprint6
+    @Sprint4
     Scenario:User should able to compare two medicine
    
     When Click on the Compare Drugs link

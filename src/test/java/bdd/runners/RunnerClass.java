@@ -12,10 +12,11 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(features = { "src/test/resources/FeatureFiles" }, 
 glue = { "bdd.stepDef", "bdd.utilities" }, 
-tags = "@Sprint" , 
+tags = "@Sprint1,@Sprint2" , 
 plugin = { "pretty", "html:target/cucumber-htmlreport",
 				"json:target/cucumber-report.json",
-				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },
+"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" },
+dryRun=false,
 //strict=true,
 //name="Common diseases and conditions",
 monochrome = true)
